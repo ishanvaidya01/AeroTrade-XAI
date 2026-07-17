@@ -9,12 +9,6 @@ from models import ToolTrace, RouteOption
 
 load_dotenv()
 
-try:
-    for key, value in st.secrets.items():
-        os.environ[key] = value
-except Exception:
-    pass
-
 st.set_page_config(page_title="AeroTrade XAI", layout="wide")
 st.title("AeroTrade XAI: Autonomous Supply Chain Orchestrator")
 
