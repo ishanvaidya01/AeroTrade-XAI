@@ -1,0 +1,59 @@
+name: Feature request
+description: Suggest an improvement to the agent workflow, explainability, or UI
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please describe the problem before the proposed solution. This project
+        is a prototype, so proposals should state whether they require real
+        logistics data, new infrastructure, or only a UI change.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or use case
+      description: What decision or workflow is currently difficult?
+      placeholder: Reviewers cannot compare the agent's ranking with an externally supplied benchmark.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: Describe the change and how it fits the existing architecture.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Agent orchestration
+        - Tools and data sources
+        - Explainability and scoring
+        - Streamlit UI
+        - Documentation and setup
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Existing approaches or workarounds you have evaluated.
+  - type: textarea
+    id: risks
+    attributes:
+      label: Data, cost, or security considerations
+      description: Note any new API costs, credentials, privacy concerns, or non-determinism.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and the roadmap before opening this request.
+          required: true
+        - label: This request does not rely on fabricated metrics or screenshots.
+          required: true
